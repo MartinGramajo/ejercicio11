@@ -7,10 +7,8 @@ import Formulario from "./components/Formulario";
 
 function App() {
   const [noticias, setNoticias] = useState([]);
-  console.log("file: App.jsx:7 ~ App ~ noticias:", noticias);
 
   useEffect(() => {
-    console.log("esto es mi consulta");
     consultarApi();
   }, []);
 
