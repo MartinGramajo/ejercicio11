@@ -9,15 +9,16 @@ function App() {
   const [noticias, setNoticias] = useState([]);
   const [category, setCategory] = useState("top");
   const [country, setCountry] = useState("ar");
+  const [language, setLanguage] = useState("es");
 
   useEffect(() => {
     consultarApi();
-  }, [category, country]);
+  }, [category, country, language]);
 
   const consultarApi = async () => {
     try {
       const respuesta = await fetch(
-        `https://newsdata.io/api/1/news?apikey=pub_26807d055cc63d04745a09599882a3e24adc3&language=es&category=${category}&country=${country}`
+        `https://newsdata.io/api/1/news?apikey=pub_26807d055cc63d04745a09599882a3e24adc3&language=${language}&category=${category}&country=${country}`
       );
 
       const dato = await respuesta.json();
@@ -44,6 +45,7 @@ function App() {
       <Formulario
         handleChangeCategory={handleChangeCategory}
         handleChangeCountry={handleChangeCountry}
+        setLanguage={setLanguage}
       />
       {noticias.length === 0 ? (
         <div className="container text-center py-5">
