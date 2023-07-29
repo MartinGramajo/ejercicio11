@@ -7,15 +7,17 @@ import Formulario from "./components/Formulario";
 
 function App() {
   const [noticias, setNoticias] = useState([]);
+  const [category, setCategory] = useState("top");
+  console.log("file: App.jsx:11 ~ App ~ category:", category);
 
   useEffect(() => {
     consultarApi();
-  }, []);
+  }, [category]);
 
   const consultarApi = async () => {
     try {
       const respuesta = await fetch(
-        `https://newsdata.io/api/1/news?apikey=pub_26807d055cc63d04745a09599882a3e24adc3&language=es`
+        `https://newsdata.io/api/1/news?apikey=pub_26807d055cc63d04745a09599882a3e24adc3&language=es&category=${category}`
       );
 
       const dato = await respuesta.json();
@@ -26,11 +28,26 @@ function App() {
     }
   };
 
+  const handleChange = (event) => {
+    const { value } = event.target;
+    setCategory(value);
+  };
+
   return (
     <div className="bg-app d-flex flex-column min-vh-100">
       <Titulo />
-      <Formulario />
-      <ListaNoticias noticias={noticias} />
+      <Formulario handleChange={handleChange} />
+      {noticias.length === 0 ? (
+        <div className="container text-center py-5">
+          <h2 className="text-white">
+            No hay noticias relacionadas con esa categoría. Por favor intenta
+            con otra categoría!!!
+          </h2>
+        </div>
+      ) : (
+        <ListaNoticias noticias={noticias} />
+      )}
+
       <Footer />
     </div>
   );
