@@ -1,0 +1,395 @@
+.bg-app {
+  background: rgb(58, 87, 180);
+  background: linear-gradient(90deg, rgba(58, 87, 180, 1) 0%, rgba(29, 30, 253, 1) 50%, rgba(69, 106, 252, 1) 100%);
+}
+
+.ag-courses_box {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+
+.ag-courses_item {
+  margin: 0 15px 30px;
+  overflow: hidden;
+  border-radius: 28px;
+  width: 400px;
+}
+
+.ag-courses-item_link {
+  display: block;
+  padding: 30px 20px;
+  background-color: #121212;
+  overflow: hidden;
+  position: relative;
+  min-height: 500px;
+  text-decoration: none;
+}
+.ag-courses-item_link:hover,
+.ag-courses-item_link:hover .ag-courses-item_date {
+  text-decoration: none;
+  color: #fff;
+}
+.ag-courses-item_link:hover .top {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+}
+.ag-courses-item_link:hover .sports {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+}
+
+.ag-courses-item_link:hover .entertainment {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+}
+
+.ag-courses-item_link:hover .business {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+}
+
+.ag-courses-item_link:hover .technology {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+}
+
+.ag-courses-item_link:hover .health {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+}
+
+.ag-courses-item_link:hover .environment {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+}
+
+.ag-courses-item_link:hover .food {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+}
+
+.ag-courses-item_link:hover .politics {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+}
+
+.ag-courses-item_link:hover .science {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+}
+
+.ag-courses-item_link:hover .tourism {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+}
+
+.ag-courses-item_link:hover .world {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+}
+
+.ag-courses-item_title {
+  min-height: 87px;
+  margin: 0 0 25px;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+  z-index: 2;
+  position: relative;
+}
+
+.ag-courses-item_description {
+  min-height: 87px;
+  margin: 0 0 25px;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  z-index: 2;
+  position: relative;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.ag-courses-item_date-box {
+  font-size: 18px;
+  color: #fff;
+
+  z-index: 2;
+  position: relative;
+}
+.ag-courses-item_date {
+  font-weight: bold;
+  color: #4c49ea;
+  -webkit-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+
+.business {
+  height: 128px;
+  width: 128px;
+  background-color: #952aff;
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.entertainment {
+  height: 128px;
+  width: 128px;
+  background-color: #f9b234;
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.environment {
+  height: 128px;
+  width: 128px;
+  background-color: #205a03;
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.food {
+  height: 128px;
+  width: 128px;
+  background-color: #f9b234;
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.health {
+  height: 128px;
+  width: 128px;
+  background-color: #3ec3cd;
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.politics {
+  height: 128px;
+  width: 128px;
+  background-color: #08eafa;
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.science {
+  height: 128px;
+  width: 128px;
+  background-color: #f3bd09;
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.sports {
+  height: 128px;
+  width: 128px;
+  background-color: #3ecd5e;
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.technology {
+  height: 128px;
+  width: 128px;
+  background-color: #e44002;
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.top {
+  height: 128px;
+  width: 128px;
+  background-color: #4c49ea;
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.tourism {
+  height: 128px;
+  width: 128px;
+  background-color: #ffea00;
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.world {
+  height: 128px;
+  width: 128px;
+  background-color: #ff00cc;
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.card-msj {
+  width: 600px !important;
+  margin-top: 5rem;
+}
+
+@media only screen and (max-width: 979px) {
+  .ag-courses_item {
+    -ms-flex-preferred-size: calc(50% - 30px);
+    flex-basis: calc(100% - 30px);
+  }
+  .ag-courses-item_title {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ag-format-container {
+    width: 60%;
+  }
+
+  .ag-courses-item_link {
+    min-height: 500px;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .ag-courses_item {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 90%;
+  }
+  .ag-courses-item_title {
+    min-height: 72px;
+    line-height: 1;
+
+    font-size: 24px;
+  }
+  .ag-courses-item_link {
+    padding: 22px 40px;
+    min-height: 500px;
+  }
+  .ag-courses-item_date-box {
+    font-size: 16px;
+  }
+
+  .ag-courses_item {
+    width: 380px;
+  }
+
+  .ag-courses-item_description {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .ag-courses_item {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 90%;
+  }
+  .ag-courses-item_title {
+    min-height: 72px;
+    line-height: 1;
+
+    font-size: 24px;
+  }
+  .ag-courses-item_link {
+    padding: 22px 40px;
+    min-height: 400px;
+  }
+  .ag-courses-item_date-box {
+    font-size: 16px;
+  }
+
+  .ag-courses_item {
+    width: 300px;
+  }
+
+  .ag-courses-item_description {
+    font-size: 14px;
+    width: 300px;
+  }
+  .card-msj {
+    width: 240px !important;
+    height: 240px !important;
+  }
+}
