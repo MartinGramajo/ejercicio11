@@ -1,0 +1,4 @@
+.bg-app {
+  background: rgb(58, 87, 180);
+  background: linear-gradient(90deg, rgba(58, 87, 180, 1) 0%, rgba(29, 30, 253, 1) 50%, rgba(69, 106, 252, 1) 100%);
+}
