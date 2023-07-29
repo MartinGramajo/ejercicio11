@@ -122,7 +122,6 @@
   color: #fff;
   z-index: 2;
   position: relative;
-  width: 350px;
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -351,6 +350,10 @@
   .ag-courses_item {
     width: 380px;
   }
+
+  .ag-courses-item_description {
+    font-size: 14px;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -373,6 +376,11 @@
   }
 
   .ag-courses_item {
+    width: 300px;
+  }
+
+  .ag-courses-item_description {
+    font-size: 14px;
     width: 300px;
   }
 }

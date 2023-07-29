@@ -3,6 +3,7 @@ import "./App.css";
 import Titulo from "./components/Titulo";
 import ListaNoticias from "./components/ListaNoticias";
 import Footer from "./components/Footer";
+import Formulario from "./components/Formulario";
 
 function App() {
   const [noticias, setNoticias] = useState([]);
@@ -30,6 +31,7 @@ function App() {
   return (
     <div className="bg-app d-flex flex-column min-vh-100">
       <Titulo />
+      <Formulario />
       <ListaNoticias noticias={noticias} />
       <Footer />
     </div>
