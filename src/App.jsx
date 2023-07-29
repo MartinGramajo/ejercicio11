@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Titulo from "./components/Titulo";
+import ListaNoticias from "./components/ListaNoticias";
+import Footer from "./components/Footer";
 
 function App() {
   const [noticias, setNoticias] = useState([]);
@@ -27,15 +29,9 @@ function App() {
 
   return (
     <div className="bg-app d-flex flex-column min-vh-100">
-      <section>
-        <Titulo />
-      </section>
-      <footer className="py-5 mt-auto bg-dark">
-        <h5 className="text-center text-white">
-          {" "}
-          © Todos los derechos reservados
-        </h5>
-      </footer>
+      <Titulo />
+      <ListaNoticias />
+      <Footer />
     </div>
   );
 }
