@@ -1,9 +1,11 @@
 import Noticia from "./Noticia";
 
-const ListaNoticias = () => {
+const ListaNoticias = ({ noticias }) => {
   return (
     <div className="container d-flex flex-wrap justify-content-around">
-      <Noticia />
+      {noticias.map((item, i) => (
+        <Noticia item={item} key={i} />
+      ))}
     </div>
   );
 };

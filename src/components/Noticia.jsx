@@ -1,16 +1,20 @@
-const Noticia = () => {
+const Noticia = ({ item }) => {
+  const { category, description, title, pubDate, link } = item;
+
   return (
-    <article className="ag-format-container">
+    <article className="">
       <div className="ag-courses_box">
         <div className="ag-courses_item">
-          <a href="#" className="ag-courses-item_link">
-            <div className="ag-courses-item_bg"></div>
-            <h6 className="">categoria</h6>
-            <h1 className="ag-courses-item_title">Titulo de la noticia</h1>
-            <h4 className="">contenido de la noticia</h4>
+          <a href={link} className="ag-courses-item_link">
+            <div className={category}></div>
+            <h6 className="">{category}</h6>
+            <h1 className="ag-courses-item_title">{title}</h1>
+            <h4 className="limit-text ag-courses-item_description">
+              {description}
+            </h4>
             <h6 className="ag-courses-item_date-box">
               Fecha:
-              <span className="ag-courses-item_date"> 04.11.2022</span>
+              <span className="ag-courses-item_date"> {pubDate}</span>
             </h6>
           </a>
         </div>
