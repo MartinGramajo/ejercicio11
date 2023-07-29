@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="bg-app d-flex flex-column min-vh-100">
       <Titulo />
-      <ListaNoticias />
+      <ListaNoticias noticias={noticias} />
       <Footer />
     </div>
   );
