@@ -309,6 +309,11 @@
   transition: all 0.5s ease;
 }
 
+.card-msj {
+  width: 600px !important;
+  margin-top: 5rem;
+}
+
 @media only screen and (max-width: 979px) {
   .ag-courses_item {
     -ms-flex-preferred-size: calc(50% - 30px);
@@ -382,5 +387,9 @@
   .ag-courses-item_description {
     font-size: 14px;
     width: 300px;
+  }
+  .card-msj {
+    width: 240px !important;
+    height: 240px !important;
   }
 }

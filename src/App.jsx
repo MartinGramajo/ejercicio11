@@ -47,16 +47,18 @@ function App() {
         handleChangeCountry={handleChangeCountry}
         setLanguage={setLanguage}
       />
-      {noticias.length === 0 ? (
-        <div className="container text-center py-5">
-          <h2 className="text-white">
-            No hay noticias relacionadas con esa categoría o país. Por favor
-            intenta con otra categoría o país!!!
-          </h2>
-        </div>
-      ) : (
-        <ListaNoticias noticias={noticias} />
-      )}
+      <section className="py-5 container">
+        {noticias.length === 0 ? (
+          <div className=" text-center card py-4 ">
+            <h2>
+              No hay noticias relacionadas con esa categoría o país. Por favor
+              intenta con otra categoría o país!
+            </h2>
+          </div>
+        ) : (
+          <ListaNoticias noticias={noticias} />
+        )}
+      </section>
 
       <Footer />
     </div>
