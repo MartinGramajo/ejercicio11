@@ -14,7 +14,7 @@
   margin: 0 15px 30px;
   overflow: hidden;
   border-radius: 28px;
-  width: 400px;
+  width: 380px;
 }
 
 .ag-courses-item_link {
@@ -331,6 +331,9 @@
 
   .ag-courses-item_link {
     min-height: 500px;
+  }
+  .ag-courses_item {
+    width: 290px;
   }
 }
 @media only screen and (max-width: 639px) {
