@@ -1,14 +1,10 @@
-import { ButtonGroup, Button, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 
-const Formulario = ({
-  handleChangeCategory,
-  handleChangeCountry,
-  setLanguage,
-}) => {
+const Formulario = ({ handleChangeCategory, handleChangeCountry }) => {
   return (
     <section className="container">
       <div className="row">
-        <div className="col-md-4 col-12 pb-4">
+        <div className="col-md-6 col-12 pb-4">
           <Form.Label className="text-white my-2 me-3" htmlFor="inputPassword5">
             Categorías
           </Form.Label>
@@ -28,18 +24,7 @@ const Formulario = ({
           </Form.Select>
         </div>
 
-        <div className="col-md-4 col-12 text-center">
-          <ButtonGroup aria-label="Basic example">
-            <Button onClick={() => setLanguage("es")} variant="info">
-              Español
-            </Button>
-            <Button onClick={() => setLanguage("en")} variant="success">
-              Ingles
-            </Button>
-          </ButtonGroup>
-        </div>
-
-        <div className="col-md-4 col-12 pb-4">
+        <div className="col-md-6 col-12 pb-4">
           <Form.Label className="text-white my-2 me-3" htmlFor="inputPassword5">
             País
           </Form.Label>
