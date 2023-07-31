@@ -11,6 +11,12 @@ se muestra una card por pantalla con el mensaje:
 
 > 'No hay noticias relacionadas con esa categoría o país. Por favor intenta con otra categoría o país!'
 
+## Extra 💪
+
+Le agregue una botonera en la parte superior derecha que me permite al usuario cambiar el idioma en ingles y español.
+
+Como asi también, le agregue un buscador que permite al usuario buscar una noticia por una palabra o frase clave en el titulo de la misma. Mostrando las Noticias con la palabra o frase relacionada.
+
 ## Tecnologias / Herramientas ⚙
 
 - React
