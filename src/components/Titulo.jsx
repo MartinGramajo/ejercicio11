@@ -1,6 +1,4 @@
 import { ButtonGroup, Button, Form } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const Titulo = ({ setLanguage, search, setSearch, handleChangeInput }) => {
   const handleSubmit = (e) => {
@@ -33,9 +31,6 @@ const Titulo = ({ setLanguage, search, setSearch, handleChangeInput }) => {
                 value={search}
                 onChange={handleChangeInput}
               />
-              <Button variant="success" type="submit">
-                <FontAwesomeIcon icon={faSearch} />
-              </Button>
             </Form.Group>
           </Form>
         </div>

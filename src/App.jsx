@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useDebounce } from "./hook/useDebounce";
 import "./App.css";
 import Titulo from "./components/Titulo";
 import ListaNoticias from "./components/ListaNoticias";
@@ -12,15 +13,17 @@ function App() {
   const [country, setCountry] = useState("ar");
   const [language, setLanguage] = useState("es");
   const [loading, setLoading] = useState(true);
+  const [search, setSearch] = useState("");
+  const debounceValue = useDebounce(search, 1000);
 
   useEffect(() => {
     consultarApi();
-  }, [category, country, language]);
+  }, [category, country, language, debounceValue]);
 
   const consultarApi = async () => {
     try {
       setLoading(true);
-      let URL_KEY = `https://newsdata.io/api/1/news?apikey=pub_26807d055cc63d04745a09599882a3e24adc3&language=${language}&category=${category}&country=${country}`;
+      let URL_KEY = `https://newsdata.io/api/1/news?apikey=pub_26807d055cc63d04745a09599882a3e24adc3&language=${language}&category=${category}&country=${country}&qInTitle=${debounceValue}`;
       const respuesta = await fetch(URL_KEY);
 
       const dato = await respuesta.json();
@@ -42,9 +45,18 @@ function App() {
     setCountry(value);
   };
 
+  const handleChangeInput = ({ target }) => {
+    setSearch(target.value);
+  };
+
   return (
     <div className="bg-app d-flex flex-column min-vh-100">
-      <Titulo setLanguage={setLanguage} />
+      <Titulo
+        setLanguage={setLanguage}
+        search={search}
+        setSearch={setSearch}
+        handleChangeInput={handleChangeInput}
+      />
       <Formulario
         handleChangeCategory={handleChangeCategory}
         handleChangeCountry={handleChangeCountry}
