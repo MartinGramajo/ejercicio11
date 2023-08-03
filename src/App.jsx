@@ -5,30 +5,36 @@ import Titulo from "./components/Titulo";
 import ListaNoticias from "./components/ListaNoticias";
 import Footer from "./components/Footer";
 import Formulario from "./components/Formulario";
-import { Spinner } from "react-bootstrap";
+import { Button, ButtonGroup, Spinner } from "react-bootstrap";
 
 function App() {
   const [noticias, setNoticias] = useState([]);
+  console.log("file: App.jsx:12 ~ App ~ noticias:", noticias);
   const [category, setCategory] = useState("top");
   const [country, setCountry] = useState("ar");
   const [language, setLanguage] = useState("es");
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
+  const [page, setPage] = useState("");
+  const [currentPage, setCurrentPage] = useState("");
+  const [nextPage, setNextPage] = useState("");
+
   const debounceValue = useDebounce(search, 1000);
 
   useEffect(() => {
     consultarApi();
-  }, [category, country, language, debounceValue]);
+  }, [category, country, language, debounceValue, page]);
 
   const consultarApi = async () => {
     try {
       setLoading(true);
-      let URL_KEY = `https://newsdata.io/api/1/news?apikey=pub_26807d055cc63d04745a09599882a3e24adc3&language=${language}&category=${category}&country=${country}&qInTitle=${debounceValue}`;
+      let URL_KEY = `https://newsdata.io/api/1/news?apikey=pub_26807d055cc63d04745a09599882a3e24adc3&language=${language}&category=${category}&country=${country}&qInTitle=${debounceValue}&page=${page}`;
       const respuesta = await fetch(URL_KEY);
-
       const dato = await respuesta.json();
+      console.log("file: App.jsx:32 ~ consultarApi ~ dato:", dato);
 
       setNoticias(dato.results);
+      setNextPage(dato.nextPage);
       setLoading(false);
     } catch (error) {
       console.log(error);
@@ -47,6 +53,15 @@ function App() {
 
   const handleChangeInput = ({ target }) => {
     setSearch(target.value);
+  };
+
+  const handleChangeNextPage = () => {
+    setCurrentPage(nextPage);
+    setPage(currentPage);
+  };
+
+  const handleChangeReturnPage = () => {
+    setPage("");
   };
 
   return (
@@ -79,7 +94,20 @@ function App() {
           )}
         </section>
       )}
-
+      <section className="d-flex justify-content-center py-5">
+        <ButtonGroup aria-label="Basic example">
+          <Button
+            className="me-4"
+            onClick={handleChangeReturnPage}
+            variant="primary"
+          >
+            Volver al Inicio
+          </Button>
+          <Button onClick={handleChangeNextPage} variant="info">
+            Ver mas
+          </Button>
+        </ButtonGroup>
+      </section>
       <Footer />
     </div>
   );
