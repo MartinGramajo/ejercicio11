@@ -13,9 +13,11 @@ se muestra una card por pantalla con el mensaje:
 
 ## Extra 💪
 
-Le agregue una botonera en la parte superior derecha que me permite al usuario cambiar el idioma en ingles y español.
+Le agregue una botonera en la parte superior derecha que permite al usuario cambiar el idioma en ingles y español.
 
-Como asi también, le agregue un buscador que permite al usuario buscar una noticia por una palabra o frase clave en el titulo de la misma. Mostrando las Noticias con la palabra o frase relacionada.
+Como asi también,agregue un buscador que permite al usuario buscar una noticia por una palabra o frase clave en el titulo de la misma. Mostrando por pantalla las Noticias con la palabra o frase relacionada.
+
+Por ultimo hice un paginado sencillo para ir mostrando mas noticias con el boton  **Ver mas** y volver a la pagina inicial con el boton  **Volver al inicio**.
 
 ## Tecnologias / Herramientas ⚙
 
