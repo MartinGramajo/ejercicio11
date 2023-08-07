@@ -9,7 +9,6 @@ import { Button, ButtonGroup, Spinner } from "react-bootstrap";
 
 function App() {
   const [noticias, setNoticias] = useState([]);
-  console.log("file: App.jsx:12 ~ App ~ noticias:", noticias);
   const [category, setCategory] = useState("top");
   const [country, setCountry] = useState("ar");
   const [language, setLanguage] = useState("es");
@@ -31,8 +30,6 @@ function App() {
       let URL_KEY = `https://newsdata.io/api/1/news?apikey=pub_26807d055cc63d04745a09599882a3e24adc3&language=${language}&category=${category}&country=${country}&qInTitle=${debounceValue}&page=${page}`;
       const respuesta = await fetch(URL_KEY);
       const dato = await respuesta.json();
-      console.log("file: App.jsx:32 ~ consultarApi ~ dato:", dato);
-
       setNoticias(dato.results);
       setNextPage(dato.nextPage);
       setLoading(false);
