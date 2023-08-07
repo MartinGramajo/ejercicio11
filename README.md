@@ -2,9 +2,9 @@
 
 En este proyecto lo que hicimos fue crear una app que muestra por pantalla una lista de noticias, consumiendo la API **https://newsdata.io/**.
 
-La App cuenta con 2 selectores uno por categorías y el otro por país, los cuales al ser elegidos por el usuario nos traen los datos mostrando por pantalla la lista de noticias relacionada con la elección.
+La App cuenta con 2 selectores uno por categorías y el otro por país, los cuales al ser elegidos por el usuario nos traen los datos mostrando por pantalla en una lista de noticias relacionada con la elección.
 
-Cada una de las noticias esta trabaja de forma tal que su background cambia de color dependiendo de la categoría de la noticia.
+Cada una de las noticias esta trabajada de forma tal que el background de la card cambia de color dependiendo de la categoría de la noticia.
 
 Ademas en caso de no existir ningún tipo de noticia relacionada con la categoría, país o ambas por el usuario
 se muestra una card por pantalla con el mensaje:
@@ -46,9 +46,9 @@ Como asi también, le agregue un buscador que permite al usuario buscar una noti
 ## Como Clonar el repositorio 💻
 
 ```bash
-Agrego el link de mi repo [repositorio](https://github.com/MartinGramajo/ejercicio11.git)
+Agrego el link de mi repo [repositorio](https://github.com/MartinGramajo/ejercicio12.git)
 
-git clone https://github.com/MartinGramajo/ejercicio11.git
+git clone https://github.com/MartinGramajo/ejercicio12.git
 ```
 
 ## Como contribuir con el repositorio 🤝
